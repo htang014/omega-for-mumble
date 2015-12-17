@@ -7,6 +7,7 @@
  *
  */
  
+
 /* ================
     Custom Opacity
    ================ */
@@ -132,10 +133,6 @@ QWidget {
   color: #CAD4E0;
 }
 
-/*Q {
-    background: #536480;
-}*/
-
 /* ======
     Main
    ====== */
@@ -159,8 +156,25 @@ QMainWindow::separator {
 }
 
 a {
-  color: #3C96F1;
+  color: #7CFC00;
   text-decoration: none;
+} 
+
+/* ========
+    Wizard
+   ======== */
+
+QWizard * {
+    background: #3C4C66;
+    color: #CAD4E0;
+}
+
+QLabel {
+    background: transparent;
+}
+
+QCheckBox {
+    background: transparent;
 }
 
 /* =========
@@ -211,7 +225,6 @@ QGroupBox {
   font-size: 11pt;
   margin-bottom: 10px;
   border-top: 12px solid #ECEFF4;
-  /*border-radius: 6px;*/
 }
 
 QGroupBox::title {
@@ -222,7 +235,6 @@ QGroupBox::title {
   padding-top: 12px;
   padding-bottom: 12px;
   color: #CAD4E0;
-  /* border-bottom: 2px solid #EAEEF1; */
   background: #536480;
   margin-bottom: 35px;
 }
@@ -255,7 +267,8 @@ QLabel#about {
   qproperty-text: "...";
 }
 
-QLineEdit, QComboBox {
+QLineEdit, QComboBox,
+QSpinBox, QAbstractSpinBox {
   background: #536480;
   color: #CAD4E0;
   border-radius: 6px;
@@ -371,54 +384,7 @@ QToolButton:off {
   border: 0;
 }
 
-/* ==================================
-    Server Select - Channels - Users
-   ================================== */
 
-QTreeView {
-  background: #2C323D;
-  color: #ACB9CA;
-  font: normal 180% Arial, sans-serif;
-  font-weight: bold;
-  padding: 0px;
-  border: 0px;
-  outline: 1px transparent;
-  align: center;
-}
-
-QTreeView::branch {
-  padding-left: 6px;
-  padding-right: 5px;
-  margin-right: -10px;
-}
-
-QTreeView::branch:has-children:closed {
-  image: url(skin:custom/arrow_right.svg);
-}
-
-QTreeView::branch:has-children:open {
-  image: url(skin:custom/arrow_down.svg);
-}
-
-QTreeView::item {
-  height: 26px;
-  padding: 4px;
-  background: transparent;
-  border-bottom: 0px solid #ECEFF4;
-  border-left: 2px solid transparent;
-  margin-left: 10px;
-}
-
-QTreeView::item:hover,
-QTreeView::item:focus {
-  /*border-left: 4px solid transparent;*/
-}
-
-QTreeView::item:selected,
-QTreeView::item:selected:active {
-  background: #374256;
-  color: #CAD4E0;
-}
 
 /* ===================
     Chat - Log Window
@@ -574,6 +540,60 @@ RichTextHtmlEdit {
   padding: 0px;
   font-size: 14px;
   border: 0;
+}
+
+/* ==================================
+    Server Select - Channels - Users
+   ================================== */
+
+QTreeView {
+  background: #2C323D;
+  color: #ACB9CA;
+  font: normal 180% Arial, sans-serif;
+  font-weight: bold;
+  padding: 0px;
+  border: 0px;
+  outline: 1px transparent;
+  align: center;
+}
+
+QTreeView::branch {
+  padding-left: 6px;
+  padding-right: 5px;
+  margin-right: -10px;
+}
+
+QTreeView::branch:has-children:closed {
+  image: url(skin:custom/arrow_right.svg);
+}
+
+QTreeView::branch:has-children:open {
+  image: url(skin:custom/arrow_down.svg);
+}
+
+QTreeView::item {
+  height: 26px;
+  padding: 4px;
+  background: transparent;
+  border-bottom: 0px solid #ECEFF4;
+  border-left: 2px solid transparent;
+  margin-left: 0px;
+}
+
+QTreeView::item:first,
+QTreeView::item:only-one {
+  margin-left: 10px;
+}
+
+QTreeView::item:hover,
+QTreeView::item:focus {
+  /*border-left: 4px solid transparent;*/
+}
+
+QTreeView::item:selected,
+QTreeView::item:selected:active {
+  background: #374256;
+  color: #CAD4E0;
 }
 
 /* ==========
