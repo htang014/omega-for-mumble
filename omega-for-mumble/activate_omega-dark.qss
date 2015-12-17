@@ -664,6 +664,10 @@ QDialog#ConnectDialog {
   qproperty-customizeWindowHint: true;
 }
 
+QAbstractItemView {
+  qproperty-alternatingRowColors: false;
+}
+
 /* ===============
     Configuration
    =============== */
