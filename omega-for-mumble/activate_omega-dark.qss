@@ -43,9 +43,9 @@ QMainWindow#MainWindow {
 
 QHeaderView::section {
   border: 0;
-  background: #ECEFF4;
+  background: #536480;
   padding: 6px;
-  color: #8392A9;
+  color: #CAD4E0;
 }
 
 QHeaderView::down-arrow {
@@ -137,7 +137,7 @@ QWidget {
    ====== */
 
 QDialog {
-  background: #CBD5E1;
+  background: #3C4C66;
   color: #8392A9;
 }
 
@@ -148,10 +148,10 @@ QMainWindow {
 }
 
 QMainWindow::separator {
-  background: #CBD5E1;
+  background: #3C4C66;
   color: #FFF;
-  width: 1px;
-  height: 1px;
+  width: 4px;
+  height: 4px;
 }
 
 a {
@@ -304,6 +304,8 @@ QTextEdit#qteChat {
   qproperty-placeholderText: "type...";
   qproperty-cursor: IBeam;
   color: #8392A9;
+  font: normal;
+  font-weight: bold;
   background: #2C323D;
   padding-left: 5px;
   padding-right: 5px;
@@ -336,17 +338,17 @@ QToolBar::separator {
 }
 
 QToolBar::handle {
-  width: 6px;
-  height: 6px;
+  width: 15px;
+  height: 15px;
 }
 
 QToolButton {
   background: transparent;
   border: 0;
-  height: 10px;
-  width: 10px;
+  height: 14px;
+  width: 14px;
   padding: 8px;
-  margin-left: 5px;
+  margin-left: 0px;
 }
 
 QToolButton:hover {
@@ -374,22 +376,22 @@ QTreeView {
   font-weight: bold;
   padding: 0px;
   border: 0px;
+  outline: 1px transparent;
   align: center;
 }
 
-QTreeView::branch:has-children:!has-siblings:closed,
-QTreeView::branch:closed:has-children:has-siblings {
-  background: #536480;
+QTreeView::branch {
+  padding-left: 6px;
+  padding-right: 5px;
+  margin-right: -10px;
 }
 
-QTreeView::branch:open:has-children:!has-siblings,
-QTreeView::branch:open:has-children:has-siblings {
-  background: #8392A9;
+QTreeView::branch:has-children:closed {
+  image: url(skin:custom/arrow_right.svg);
 }
 
-QTreeView::branch:open:has-children:!has-siblings:selected,
-QTreeView::branch:open:has-children:has-siblings:selected {
-  background: #1DCE73;
+QTreeView::branch:has-children:open {
+  image: url(skin:custom/arrow_down.svg);
 }
 
 QTreeView::item {
@@ -398,12 +400,12 @@ QTreeView::item {
   background: transparent;
   border-bottom: 0px solid #ECEFF4;
   border-left: 2px solid transparent;
+  margin-left: 10px;
 }
 
 QTreeView::item:hover,
 QTreeView::item:focus {
-  border-left: 4px solid #374256;
-  padding-left: 2px;
+  /*border-left: 4px solid transparent;*/
 }
 
 QTreeView::item:selected,
@@ -419,7 +421,8 @@ QTreeView::item:selected:active {
 QTextBrowser {
   background: #2C323D;
   color: #ACB9CA;
-  padding: 0px;
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding: 6px;
   margin: 0px;
   font-size: 14px;
   border: 0;
@@ -575,11 +578,19 @@ RichTextHtmlEdit {
   margin-top: 1px;
 }
 
-QCheckBox::indicator:unchecked {
+QMenu::indicator {
+  left: 9px;
+}
+
+QCheckBox::indicator:unchecked,
+QMenu::indicator:unchecked,
+QTreeView::indicator:unchecked {
   image: url(skin:custom/checkbox_unchecked.svg);
 }
 
-QCheckBox::indicator:checked {
+QCheckBox::indicator:checked,
+QMenu::indicator:checked,
+QTreeView::indicator:checked {
   image: url(skin:custom/checkbox_checked.svg);
 }
 
