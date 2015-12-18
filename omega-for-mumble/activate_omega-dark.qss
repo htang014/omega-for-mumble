@@ -267,10 +267,17 @@ QLabel#about {
   qproperty-text: "...";
 }
 
-QLineEdit, QComboBox,
-QSpinBox, QAbstractSpinBox {
+QLineEdit, QComboBox {
   background: #536480;
   color: #CAD4E0;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+QLineEdit:disabled, QComboBox:disabled {
+  background: #8392A9;
+  color: #ACB9CA;
   border-radius: 6px;
   padding: 5px 10px;
   font-size: 12px;
