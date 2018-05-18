@@ -7,6 +7,7 @@
  *
  */
  
+
 /* ================
     Custom Opacity
    ================ */
@@ -43,9 +44,9 @@ QMainWindow#MainWindow {
 
 QHeaderView::section {
   border: 0;
-  background: #ECEFF4;
+  background: #536480;
   padding: 6px;
-  color: #8392A9;
+  color: #CAD4E0;
 }
 
 QHeaderView::down-arrow {
@@ -95,7 +96,7 @@ QSlider::sub-page {
 }
 
 QSlider::add-page {
-  background: #ECEFF4;
+  background: #8392A9;
   border-radius: 6px;
 }
 
@@ -129,7 +130,7 @@ QWidget {
   background: transparent;
   border: 0px;
   padding: 0px;
-  color: #8392A9;
+  color: #CAD4E0;
 }
 
 /* ======
@@ -137,8 +138,8 @@ QWidget {
    ====== */
 
 QDialog {
-  background: #CBD5E1;
-  color: #8392A9;
+  background: #3C4C66;
+  color: #CAD4E0;
 }
 
 QMainWindow {
@@ -148,15 +149,32 @@ QMainWindow {
 }
 
 QMainWindow::separator {
-  background: #CBD5E1;
+  background: #3C4C66;
   color: #FFF;
-  width: 1px;
-  height: 1px;
+  width: 4px;
+  height: 4px;
 }
 
 a {
-  color: #3C96F1;
+  color: #7CFC00;
   text-decoration: none;
+} 
+
+/* ========
+    Wizard
+   ======== */
+
+QWizard * {
+    background: #3C4C66;
+    color: #CAD4E0;
+}
+
+QLabel {
+    background: transparent;
+}
+
+QCheckBox {
+    background: transparent;
 }
 
 /* =========
@@ -165,8 +183,8 @@ a {
 
 QPushButton {
   border-radius: 6px;
-  background: #FFF;
-  color: #8392A9;
+  background: #536480;
+  color: #CAD4E0;
   font-size: 12px;
   padding: 6px 10px;
 }
@@ -177,8 +195,8 @@ QPushButton:hover {
 }
 
 QPushButton:disabled {
-  background: #ECEFF4;
-  color: #CAD4E0;
+  background: #8392A9;
+  color: #ACB9CA;
 }
 
 QPushButton#qpbAdd {
@@ -188,12 +206,12 @@ QPushButton#qpbAdd {
 
 QPushButton#qpbAdd:hover {
   background: #ECEFF4;
-  color: #8392A9;
+  color: #CAD4E0;
 }
 
 QPushButton#qpbAdd:pressed {
   background: #CAD4E0;
-  color: #8392A9;
+  color: #CAD4E0;
 }
 
 /* ==============================
@@ -201,13 +219,12 @@ QPushButton#qpbAdd:pressed {
    ============================== */
 
 QGroupBox {
-  background: #FFF;
-  color: #8392A9;
+  background: #2C323D;
+  color: #CAD4E0;
   margin-top: 35px;
   font-size: 11pt;
   margin-bottom: 10px;
   border-top: 12px solid #ECEFF4;
-  border-radius: 6px;
 }
 
 QGroupBox::title {
@@ -217,33 +234,33 @@ QGroupBox::title {
   padding-right: 90000px;
   padding-top: 12px;
   padding-bottom: 12px;
-  color: #8392A9;
-  border-bottom: 2px solid #EAEEF1;
-  background: #ECEFF4;
+  color: #CAD4E0;
+  background: #536480;
   margin-bottom: 35px;
 }
 
 QTabWidget::pane {
-  background: #ECEFF4;
-  color: #444;
+  background: #536480;
+  border: #536480;
+  color: #CAD4E0;
 }
 
 QTabBar::tab {
-  background: #ECEFF4;
-  color: #8392A9;
+  background: #2C323D;
+  color: #CAD4E0;
   padding: 6px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 QTabBar::tab:hover {
-  background: #ACB9CA;
-  color: #FFF;
+  background: #1DCE73;
+  color: #CAD4E0;
 }
 
 QTabBar::tab:selected {
-  background: #FFF;
-  color: #8392A9;
+  background: #536480;
+  color: #CAD4E0;
 }
 
 QLabel#about {
@@ -251,7 +268,16 @@ QLabel#about {
 }
 
 QLineEdit, QComboBox {
-  background: #ECEFF4;
+  background: #536480;
+  color: #CAD4E0;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+QLineEdit:disabled, QComboBox:disabled {
+  background: #8392A9;
+  color: #ACB9CA;
   border-radius: 6px;
   padding: 5px 10px;
   font-size: 12px;
@@ -304,6 +330,8 @@ QTextEdit#qteChat {
   qproperty-placeholderText: "type...";
   qproperty-cursor: IBeam;
   color: #8392A9;
+  font: normal;
+  font-weight: bold;
   background: #2C323D;
   padding-left: 5px;
   padding-right: 5px;
@@ -336,17 +364,17 @@ QToolBar::separator {
 }
 
 QToolBar::handle {
-  width: 6px;
-  height: 6px;
+  width: 15px;
+  height: 15px;
 }
 
 QToolButton {
   background: transparent;
   border: 0;
-  height: 10px;
-  width: 10px;
+  height: 14px;
+  width: 14px;
   padding: 8px;
-  margin-left: 5px;
+  margin-left: 0px;
 }
 
 QToolButton:hover {
@@ -363,54 +391,7 @@ QToolButton:off {
   border: 0;
 }
 
-/* ==================================
-    Server Select - Channels - Users
-   ================================== */
 
-QTreeView {
-  background: #2C323D;
-  color: #ACB9CA;
-  font: normal 180% Arial, sans-serif;
-  font-weight: bold;
-  padding: 0px;
-  border: 0px;
-  align: center;
-}
-
-QTreeView::branch:has-children:!has-siblings:closed,
-QTreeView::branch:closed:has-children:has-siblings {
-  background: #536480;
-}
-
-QTreeView::branch:open:has-children:!has-siblings,
-QTreeView::branch:open:has-children:has-siblings {
-  background: #8392A9;
-}
-
-QTreeView::branch:open:has-children:!has-siblings:selected,
-QTreeView::branch:open:has-children:has-siblings:selected {
-  background: #1DCE73;
-}
-
-QTreeView::item {
-  height: 26px;
-  padding: 4px;
-  background: transparent;
-  border-bottom: 0px solid #ECEFF4;
-  border-left: 2px solid transparent;
-}
-
-QTreeView::item:hover,
-QTreeView::item:focus {
-  border-left: 4px solid #374256;
-  padding-left: 2px;
-}
-
-QTreeView::item:selected,
-QTreeView::item:selected:active {
-  background: #374256;
-  color: #CAD4E0;
-}
 
 /* ===================
     Chat - Log Window
@@ -419,7 +400,8 @@ QTreeView::item:selected:active {
 QTextBrowser {
   background: #2C323D;
   color: #ACB9CA;
-  padding: 0px;
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding: 6px;
   margin: 0px;
   font-size: 14px;
   border: 0;
@@ -543,9 +525,11 @@ QListWidget {
   padding: 0px;
   margin: 0px;
   border: 0px;
-  color: #8392A9;
+  background: #2C323D;
+  color: #ACB9CA;
   font: 14px;
   padding-top: 40px;
+  outline: 1px transparent;
 }
 
 QListWidget::item {
@@ -554,8 +538,8 @@ QListWidget::item {
 }
 
 QListWidget::item:selected {
-  background: #ECEFF4;
-  color: #384C65;
+  background: #374256;
+  color: #CAD4E0;
 }
 
 RichTextHtmlEdit {
@@ -563,6 +547,60 @@ RichTextHtmlEdit {
   padding: 0px;
   font-size: 14px;
   border: 0;
+}
+
+/* ==================================
+    Server Select - Channels - Users
+   ================================== */
+
+QTreeView {
+  background: #2C323D;
+  color: #ACB9CA;
+  font: normal 180% Arial, sans-serif;
+  font-weight: bold;
+  padding: 0px;
+  border: 0px;
+  outline: 1px transparent;
+  align: center;
+}
+
+QTreeView::branch {
+  padding-left: 6px;
+  padding-right: 5px;
+  margin-right: -10px;
+}
+
+QTreeView::branch:has-children:closed {
+  image: url(skin:custom/arrow_right.svg);
+}
+
+QTreeView::branch:has-children:open {
+  image: url(skin:custom/arrow_down.svg);
+}
+
+QTreeView::item {
+  height: 26px;
+  padding: 4px;
+  background: transparent;
+  border-bottom: 0px solid #ECEFF4;
+  border-left: 2px solid transparent;
+  margin-left: 0px;
+}
+
+QTreeView::item:first,
+QTreeView::item:only-one {
+  margin-left: 10px;
+}
+
+QTreeView::item:hover,
+QTreeView::item:focus {
+  /*border-left: 4px solid transparent;*/
+}
+
+QTreeView::item:selected,
+QTreeView::item:selected:active {
+  background: #374256;
+  color: #CAD4E0;
 }
 
 /* ==========
@@ -575,11 +613,19 @@ RichTextHtmlEdit {
   margin-top: 1px;
 }
 
-QCheckBox::indicator:unchecked {
+QMenu::indicator {
+  left: 9px;
+}
+
+QCheckBox::indicator:unchecked,
+QMenu::indicator:unchecked,
+QTreeView::indicator:unchecked {
   image: url(skin:custom/checkbox_unchecked.svg);
 }
 
-QCheckBox::indicator:checked {
+QCheckBox::indicator:checked,
+QMenu::indicator:checked,
+QTreeView::indicator:checked {
   image: url(skin:custom/checkbox_checked.svg);
 }
 
@@ -625,6 +671,10 @@ QDialog#ConnectDialog {
   qproperty-customizeWindowHint: true;
 }
 
+QAbstractItemView {
+  qproperty-alternatingRowColors: false;
+}
+
 /* ===============
     Configuration
    =============== */
@@ -636,15 +686,22 @@ QStackedWidget#qswPages {
 }
 
 #qlwIcons {
-  border-radius: 6px;
-  background: #FFF;
+  /*border-radius: 6px;*/
+  background: #2C323D;
+  color: #ACB9CA;
+  outline: 1px transparent;
   qproperty-iconSize: 16px;
   qproperty-minimumSize: 165px;
   qproperty-LayoutMargin: 0px;
 }
 
+#qlwIcons::item:selected {
+  background: #374256;
+  color: #CAD4E0;
+}
+
 QCheckBox#qcbExpert {
-  border-radius: 6px;
+  /*border-radius: 6px;*/
   padding: 10px;
 }
 
@@ -653,7 +710,7 @@ QCheckBox#qcbExpert {
    ========================= */
 
 QPushButton#qpbLoadPreset {
-  background: #1dce73;
+  background: #1dce73;;
   color: #FFF;
 }
 
@@ -725,7 +782,7 @@ QWhatsThis {
   background: #ECEFF4;
   color: #8392A9;
   padding: 6px;
-  border-radius: 6px;
+  /*border-radius: 6px;*/
   font-size:12pt;
   border: 2px solid #ECEFF4;
 }
